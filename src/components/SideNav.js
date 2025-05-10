@@ -13,7 +13,7 @@ const SideNav = () => {
                 </div>
             </div>
             <div className='menu-container'>
-                <Link className='menu-link'><i className="fa-solid fa-hoouse"></i>Home</Link>
+                <Link className='menu-link'><i className="fa-solid fa-house"></i>Home</Link>
                 <Link className='menu-link'><i className="fa-solid fa-book-open"></i>All Course</Link>
                 <Link className='menu-link'><i className="fa-solid fa-plus"></i>Add Course</Link>
                 <Link className='menu-link'><i className="fa-solid fa-users"></i>All Students</Link>
