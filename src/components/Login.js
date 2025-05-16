@@ -20,8 +20,13 @@ const Login = () => {
     })
       .then(res => {
         setLoading(false);
+        localStorage.setItem('token',res.data.token)
+        localStorage.setItem('fullName',res.data.fullName)
+        localStorage.setItem('imageUrl',res.data.imageUrl)
+        localStorage.setItem('imageId',res.data.imageId)
+        localStorage.setItem('email',res.data.email)
         navigate('/dashboard')
-        console.log(res)
+        console.log(res.data)
       })
       .catch(err => {
         setLoading(false);
@@ -42,7 +47,7 @@ const Login = () => {
 
         <div className='signup-right'>
           <hr />
-          <form onSubmit={submitHandler} className='signup-form'>
+          <form onSubmit={submitHandler} className='form'>
             <h1>Login with Your Account</h1>
             <input required onChange={e => { setEmail(e.target.value) }} type='email' placeholder='Email' />
             <input required onChange={e => { setPassword(e.target.value) }} type='password' placeholder='Password' />
